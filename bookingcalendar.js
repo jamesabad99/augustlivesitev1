@@ -65,13 +65,7 @@ window.onload = async () => {
   }
 };
 
-function initializeDatePicker(
-  elementId,
-  defaultDate,
-  minDate,
-  maxDate,
-  dataVariable,
-) {
+function initializeDatePicker(elementId, defaultDate, minDate, dataVariable) {
   const picker = new easepick.create({
     element: document.getElementById(elementId),
     css: ["https://csb-hrpwdp.netlify.app/augustcalendar.css"],
@@ -79,7 +73,6 @@ function initializeDatePicker(
     format: "DD MMM YYYY",
     LockPlugin: {
       minDate: minDate,
-      maxDate: maxDate,
     },
     setup(picker) {
       picker.on("select", async (e) => {
