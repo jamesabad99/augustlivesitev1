@@ -20,13 +20,8 @@ window.onload = async () => {
   if (fileInput) {
     fileInput.addEventListener("change", async function () {
       if (this.files && this.files[0]) {
-        try {
           const base64String = await readFileAsBase64(this.files[0]);
-          console.log(base64String);
           await Wized.data.setVariable("passportImageString", base64String);
-        } catch (error) {
-          console.error("Error reading file:", error);
-        }
       }
     });
   }
