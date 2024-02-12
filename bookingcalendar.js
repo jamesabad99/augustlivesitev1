@@ -1,4 +1,3 @@
-console.log("hello");
 window.onload = async () => {
   function readFileAsBase64(file) {
     if (!file) return null;
